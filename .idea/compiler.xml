@@ -9,5 +9,8 @@
         <module name="dota2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dota2" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
