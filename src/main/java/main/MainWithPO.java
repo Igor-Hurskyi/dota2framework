@@ -30,7 +30,8 @@ public class MainWithPO {
 
             driver.get("https://www.dota2.ru/");
 
-            MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+            MainPage mainPage = new MainPage(driver);
+
             mainPage.openLoginPopupButton.click();
             mainPage.loginTextField.sendKeys(prop.getProperty("login"));
             mainPage.passwordTextField.sendKeys(prop.getProperty("password"));

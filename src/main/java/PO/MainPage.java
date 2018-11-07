@@ -1,7 +1,9 @@
 package PO;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class MainPage {
 
@@ -27,5 +29,9 @@ public class MainPage {
 
     @FindBy(css = "button[type='submit")
     public WebElement acceptExitButton;
+
+    public MainPage(WebDriver driver) {
+        PageFactory.initElements(driver, MainPage.class);
+    }
 
 }
