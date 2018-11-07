@@ -2,13 +2,14 @@ package BO;
 
 import PO.MainPage;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 public class MainPageBO {
 
     MainPage mp;
 
     public MainPageBO(WebDriver driver) {
-        mp = new MainPage(driver);
+        mp = PageFactory.initElements(driver, MainPage.class);
     }
 
     public void login(String login, String password) {

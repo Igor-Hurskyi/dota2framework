@@ -29,9 +29,4 @@ public class MainPage {
 
     @FindBy(css = "button[type='submit")
     public WebElement acceptExitButton;
-
-    public MainPage(WebDriver driver) {
-        PageFactory.initElements(driver, MainPage.class);
-    }
-
 }
